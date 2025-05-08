@@ -11,6 +11,7 @@ builder.Services.AddDbContext<DatabaseDbContext>(opt => opt.UseSqlServer(builder
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddScoped<IAgentServices, AgentService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
